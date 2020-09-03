@@ -1,0 +1,550 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+/* Slider */
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 70vh;
+  background-image: url("./image/house.jpg") center center no-repeat;
+  animation: sliding 20s ease;
+  animation-iteration-count: infinite;
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.slide-content > * {
+  z-index: 100;
+}
+
+.slide {
+  position: relative;
+  margin-top: 10rem;
+  text-align: center;
+  z-index: 20;
+}
+
+.slide h1 {
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.slide p {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.search {
+  margin-top: 1.5rem;
+  padding: 0.2rem 0.2rem;
+  background-color: #fff;
+  width: fit-content;
+  margin-left: auto;
+  border-radius: 5px;
+  margin-right: auto;
+}
+
+.search input {
+  border: none;
+  padding: 1.2rem 0.5rem;
+  width: 500px;
+  font-size: 1rem;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.search button {
+  border: none;
+  background-color: rgb(47, 31, 121);
+  padding: 0.7rem 1.7rem;
+  margin-right: 0.7rem;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.search button:hover {
+  cursor: pointer;
+  background-color: rgba(47, 31, 121, 0.9);
+}
+
+/* Keunggulan */
+
+.keunggulan {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.keunggulan-container {
+  width: 70vw;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  padding: 2rem 0rem;
+}
+
+.keunggulan > h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.image-container {
+  width: 700px;
+  height: 400px;
+  background-image: url("./image/dapur.jpg");
+  background-size: cover;
+  margin: 3rem 1rem;
+}
+
+.keunggulan-content {
+  margin: 3rem auto;
+  margin-left: 3rem;
+}
+
+.keunggulan-content h1 {
+  margin-top: 1.5rem;
+  color: rgb(47, 31, 121);
+}
+
+/* Langkah */
+
+.langkah {
+  position: absolute;
+  top: 200%;
+  width: 100vw;
+  color: #fff;
+  background-color: rgb(47, 31, 121);
+  padding: 5rem 10rem;
+  padding-bottom: 7rem;
+}
+
+.langkah > h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.langkah-content {
+  margin-top: 7rem;
+  display: flex;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.langkah-content h3 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+
+.langkah-satu {
+  width: 400px;
+  margin: 0 4.5rem;
+}
+.langkah-dua {
+  width: 400px;
+  margin: 0 4.5rem;
+}
+.langkah-tiga {
+  width: 400px;
+  margin: 0 4.5rem;
+}
+
+.langkah-satu::before {
+  content: "1";
+  position: absolute;
+  font-size: 5rem;
+  opacity: 0.2;
+  transform: translate(-1.9rem, -3.5rem);
+}
+.langkah-dua::before {
+  content: "2";
+  position: absolute;
+  font-size: 5rem;
+  opacity: 0.2;
+  transform: translate(-1.9rem, -3.5rem);
+}
+.langkah-tiga::before {
+  content: "3";
+  position: absolute;
+  font-size: 5rem;
+  opacity: 0.2;
+  transform: translate(-1.9rem, -3.5rem);
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  top: 270%;
+  display: flex;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 200px;
+  border-top: 1px solid rgb(47, 31, 121);
+  padding-top: 3rem;
+}
+
+.kantor {
+  margin: 0 15rem;
+}
+
+.kantor h3 {
+  margin-bottom: 1rem;
+}
+
+.overview {
+  margin: 0 15rem;
+}
+
+.overview li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.overview li a:hover {
+  cursor: pointer;
+  color: rgb(47, 31, 121);
+}
+
+.overview h3 {
+  margin-bottom: 1rem;
+}
+/* Kalkulator */
+.calc-btn {
+  position: relative;
+  top: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.calc-btn button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 1.2rem;
+  border: none;
+  background-color: rgba(47, 31, 121, 0.9);
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  align-self: center;
+}
+
+.calc-btn button:hover {
+  background-color: #fff;
+  color: rgb(47, 31, 121);
+  cursor: pointer;
+  border: 1px solid rgb(47, 31, 121);
+  box-shadow: 1px 2px 3px rgba(47, 31, 121, 0.2);
+  transition: ease 0.3s;
+}
+
+.calc-btn p {
+  position: absolute;
+  margin-top: 5rem;
+  font-size: 1.3rem;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+/* Kalkulator fitur */
+.calculator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.calculator::before {
+  content: "1234";
+  background-image: url("./image/kamar.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+}
+
+.calculator-container {
+  display: flex;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 2px 3px 5px rgba(47, 31, 121, 0.2);
+  width: 70%;
+  height: 500px;
+}
+
+.calculator-satu {
+  width: 70%;
+  padding-top: 3rem;
+  padding-left: 2.5rem;
+}
+
+.calculator-satu a {
+  font-size: 1.2rem;
+  color: #000;
+  text-decoration: none;
+}
+.calculator-satu a:hover {
+  color: rgb(47, 31, 121);
+  cursor: pointer;
+}
+
+.calculator-satu h1 {
+  margin-top: 2rem;
+  color: rgb(47, 31, 121);
+}
+
+.calculator-satu h3 {
+  margin-top: 1rem;
+}
+.calculator-satu form {
+  display: flex;
+  flex-direction: column;
+  padding-right: 3rem;
+  margin-top: 5rem;
+}
+
+.calculator-satu form input {
+  padding: 1.5rem 1rem;
+  font-size: 1.2rem;
+  border-style: none;
+  border-bottom: 1px solid black;
+}
+
+.calculator-satu form input:focus {
+  outline: none;
+}
+
+.calculator-satu form input::-webkit-outer-spin-button,
+.calculator-satu form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calculator-dua {
+  background-color: rgb(47, 31, 121);
+  color: #fff;
+  width: 30%;
+}
+
+.calculator-satu form select {
+  margin-top: 1rem;
+  padding: 1.5rem 1rem;
+  font-size: 1.2rem;
+  border-style: none;
+  border-bottom: 1px solid black;
+}
+
+.calculator-dua form caption {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  padding: 0 3rem;
+}
+.calculator-dua form caption:first-child {
+  margin-top: 3rem;
+}
+.calculator-dua form caption input {
+  border: none;
+  padding: 1.2rem 1rem;
+  width: 300px;
+  color: white;
+  margin-top: 0.5rem;
+  background-color: rgb(47, 31, 121);
+  border-bottom: 1px solid white;
+}
+
+.calculator-dua form caption input::placeholder {
+  color: #fff;
+  text-align: center;
+}
+
+.calculator-dua form button {
+  margin: 2rem 4.2rem;
+  padding: 0.7rem 5.5rem;
+  color: rgb(47, 31, 121);
+  font-weight: 700;
+}
+
+.calculator-dua form button:hover {
+  cursor: pointer;
+}
+
+.calculator-dua form caption input:focus {
+  outline: none;
+}
+
+.calculator-dua form caption input::-webkit-outer-spin-button,
+.calculator-dua form caption input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Keyframes */
+@keyframes sliding {
+  0% {
+    background-image: url("./image/house.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  25% {
+    background-image: url("./image/house.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  50% {
+    background-image: url("./image/house2.jpg");
+  }
+  75% {
+    background-image: url("./image/house2.jpg");
+  }
+  100% {
+    background-image: url("./image/kantor.jpg");
+    animation-delay: 3000ms;
+  }
+}
+
+@media (max-width: 1200px) {
+  .calc-btn p {
+    width: 90vw;
+    text-align: center;
+  }
+  .keunggulan-container {
+    width: 90vw;
+  }
+  .langkah {
+    width: 100vw;
+  }
+  .langkah-satu {
+    margin: 0 0.5rem;
+  }
+  .langkah-dua {
+    margin: 0 0.5rem;
+  }
+  .langkah-tiga {
+    margin: 0 0.5rem;
+  }
+  .footer {
+    width: 100vw;
+    text-align: center;
+    justify-content: center;
+  }
+  .kantor {
+    margin: 0 3rem;
+  }
+  .overview {
+    margin: 0 3rem;
+  }
+}
+@media (max-width: 800px) {
+  p {
+    font-size: 0.9rem;
+  }
+  .slider h1 {
+    font-size: 2rem;
+  }
+  .slider b {
+    font-size: 1.5rem;
+  }
+  .slider p {
+    font-size: 1rem;
+  }
+  .slider input {
+    padding: 0.5rem 0.3rem;
+    width: 300px;
+  }
+
+  .calc-btn p {
+    width: 90vw;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .calc-btn button {
+    font-size: 1.2rem;
+  }
+  .keunggulan-container {
+    flex-direction: column;
+    padding: 0.2rem 0;
+    width: 90vw;
+    height: 700px;
+  }
+  .keunggulan-content {
+    margin: 0.1rem 0;
+  }
+  .image-container {
+    margin: 0.3rem 0.5rem;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 300px;
+  }
+  .keunggulan h1 {
+    font-size: 2rem;
+  }
+  .langkah {
+    width: 100vw;
+    padding: 0.5rem 0.9rem;
+  }
+  .langkah h1 {
+    font-size: 1.8rem;
+  }
+  .langkah h3 {
+    font-size: 1.4rem;
+  }
+  .langkah-satu {
+    margin: 0 0.5rem;
+  }
+  .langkah-dua {
+    margin: 0 0.5rem;
+  }
+  .langkah-tiga {
+    margin: 0 0.5rem;
+  }
+  .footer {
+    width: 100vw;
+    text-align: center;
+    justify-content: center;
+  }
+  .kantor {
+    margin: 0 3rem;
+  }
+  .overview {
+    margin: 0 3rem;
+  }
+}
